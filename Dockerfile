@@ -39,6 +39,7 @@ RUN curl -Lo /tmp/adldap.tar.gz https://github.com/auth0/ad-ldap-connector/archi
 #
 COPY resources/entrypoint.sh /opt/auth0-adldap
 RUN chmod +x /opt/auth0-adldap/entrypoint.sh
+USER node
 HEALTHCHECK CMD curl --fail http://localhost:8080 || exit 1
-EXPOSE 8080 8357 4000
+EXPOSE 8080 8357
 ENTRYPOINT ["/usr/local/bin/tini", "--", "/opt/auth0-adldap/entrypoint.sh"]
