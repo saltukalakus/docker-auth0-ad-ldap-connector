@@ -3,7 +3,7 @@ Dockerization of the Auth0 AD LDAP connector for Linux
 ## Instructions to deploy
 
  1. Copy `config.json.dist` to `config.json` and edit the file with your settings.
- 1. Start-up a container which mounts `config.json` and exposes ports 8357 and 8080. The script `example-run.sh` can help you get started and could be run as-is. Note that it will start the container with host network and 
+ 1. Start-up a container which mounts `config.json` and your cert files and exposes ports 8357 and 8080. The script [`example-run.sh`](example-run.sh) can help you get started and could be run as-is. Note that it will start the container with host networking.
  
 ## Certs
 
