@@ -27,11 +27,7 @@ fi
 # the admin server uses port 8357
 node admin/server.js &
 
-# health checker uses port 8080 ...
-# used by Docker HEALTHCHECK but can also be used by load balancer (e.g. AWS ELB)
-node healthcheck.js &
-
-# wait a moment to get messages from other out the way
+# wait a moment to get messages from admin/server.js out the way
 sleep 1
 
 # start the connector
