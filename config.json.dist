@@ -1,0 +1,8 @@
+{
+  "LDAP_BASE": "dc=SUB_DOMAIN,dc=DOMAIN,dc=TOP_LEVEL_DOMAIN",
+  "LDAP_URL": "ldap://FQDN_OR_IP_OF_LDAP_SERVER",
+  "LDAP_BIND_USER": "LDAP_USER",
+  "LDAP_BIND_PASSWORD":"LDAP_PASSWORD",
+  "PROVISIONING_TICKET": "https://your-domain.auth0.com/other/parts/here",
+  "CONNECTIONS_API_V2_KEY": ""
+}
