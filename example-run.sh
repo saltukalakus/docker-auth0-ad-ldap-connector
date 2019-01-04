@@ -23,6 +23,6 @@ docker run -it --rm --name auth0-ldap --network=host \
 -v "$CWD"/config.json:/opt/auth0-adldap/config.json \
 -v "$CWD"/cert.key:/opt/auth0-adldap/certs/cert.key \
 -v "$CWD"/cert.pem:/opt/auth0-adldap/certs/cert.pem \
-sylnsr/auth0-adldap
+vikasjayaram/auth0-ad-ldap-connector:4.1.6
 
 # NOTE: this is only an example for you to base your own solution on
