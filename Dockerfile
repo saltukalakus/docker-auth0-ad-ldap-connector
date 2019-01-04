@@ -1,6 +1,6 @@
-FROM node:7.10.0-alpine
+FROM node:8.15.0-alpine
 
-ARG VERSION=3.8.2
+ARG VERSION=4.1.6
 
 RUN mkdir -p /opt/auth0-adldap/certs
 WORKDIR /opt/auth0-adldap
@@ -11,7 +11,6 @@ RUN apk --no-cache add bash ca-certificates curl g++ git make openssl python tin
     mv /tmp/ad-ldap-connector-$VERSION/* /opt/auth0-adldap && \
     npm install && \
     chown -R node /opt/auth0-adldap && \
-    npm cache clean && \
     apk del g++ make python && \
     rm -rf /tmp/* /var/cache/apk/*
 
