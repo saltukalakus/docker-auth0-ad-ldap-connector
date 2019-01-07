@@ -15,8 +15,9 @@ RUN apk --no-cache add bash ca-certificates curl g++ git make openssl python tin
     rm -rf /tmp/* /var/cache/apk/*
 
 COPY entrypoint.sh /opt/auth0-adldap
+# Replace the host listening from 127.0.0.1 to 0.0.0.0 for the admin/server.js to be accessable from host machine.
+RUN sed -i 's/127.0.0.1/0.0.0.0/g' /opt/auth0-adldap/admin/server.js
 RUN chmod +x /opt/auth0-adldap/entrypoint.sh
 USER node
-HEALTHCHECK CMD curl --fail http://localhost:8357/codemirror-addon/hint/show-hint.css || exit 1
 EXPOSE 8357
 ENTRYPOINT ["/sbin/tini", "--", "/opt/auth0-adldap/entrypoint.sh"]
