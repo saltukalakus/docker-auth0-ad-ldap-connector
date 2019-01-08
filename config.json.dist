@@ -4,5 +4,6 @@
   "LDAP_BIND_USER": "LDAP_USER",
   "LDAP_BIND_PASSWORD":"LDAP_PASSWORD",
   "LDAP_USER_BY_NAME": "(|(cn={0})(mail={0}))",
+  "LDAP_SEARCH_ALL_QUERY": "(objectClass=person)",
   "PROVISIONING_TICKET": "https://your-domain.auth0.com/other/parts/here"
 }
