@@ -13,9 +13,7 @@ If you don't mount your own certs the container will automatically generate a se
 
 ## Troubleshooting
 
-For using the admin interface exposed on port 8357, you should follow the instructions at https://auth0.com/docs/api/management/v2/tokens to get a management JWT and set that token in the config.json file for the `CONNECTIONS_API_V2_KEY` setting.
-
-Once you start the container with a valid token set for `CONNECTIONS_API_V2_KEY` you can (provided you mapped the port) go to http://localhost:8357 and click the [Troubleshooting](https://auth0.com/docs/connector/modify#troubleshooting) tab to run the tests.
+Go to http://localhost:8357 and click the [Troubleshooting](https://auth0.com/docs/connector/modify#troubleshooting) tab to run the tests.
 
 ### Cert mismatch problem
 If you have the following issue where the containers output is something like the following:
