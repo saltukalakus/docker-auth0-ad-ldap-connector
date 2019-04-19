@@ -19,8 +19,8 @@ else
 	cat ./cert.crt ./cert.key > ./cert.pem
 fi
 
-docker run -it --rm --name auth0-ldap --network=bridge \
--p 0.0.0.0:8357:8357 \
+docker run -it --rm --name auth02-ldap --network=bridge \
+-p 0.0.0.0:8358:8358 \
 -v "$CWD"/config.json:/opt/auth0-adldap/config.json \
 -v "$CWD"/cert.key:/opt/auth0-adldap/certs/cert.key \
 -v "$CWD"/cert.pem:/opt/auth0-adldap/certs/cert.pem \

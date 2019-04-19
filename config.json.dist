@@ -1,9 +1,11 @@
 {
-  "LDAP_BASE": "dc=SUB_DOMAIN,dc=DOMAIN,dc=TOP_LEVEL_DOMAIN",
-  "LDAP_URL": "ldap://FQDN_OR_IP_OF_LDAP_SERVER",
-  "LDAP_BIND_USER": "LDAP_USER",
-  "LDAP_BIND_PASSWORD":"LDAP_PASSWORD",
+  "LDAP_BASE": "dc=auth0dse,dc=local",
+  "LDAP_URL": "ldap://172.17.0.2",
+  "ANONYMOUS_SEARCH_ENABLED": false,
   "LDAP_USER_BY_NAME": "(|(cn={0})(mail={0}))",
+  "LDAP_BIND_USER": "cn=admin,dc=auth0dse,dc=local",
   "LDAP_SEARCH_ALL_QUERY": "(objectClass=person)",
-  "PROVISIONING_TICKET": "https://your-domain.auth0.com/other/parts/here"
+  "PROVISIONING_TICKET": "https://saltuk-adfs.auth0.com/p/ad/WIVzz5eW",
+  "LDAP_BIND_PASSWORD":"admin"
 }
+
